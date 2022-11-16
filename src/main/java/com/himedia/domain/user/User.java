@@ -11,6 +11,7 @@ import javax.persistence.*;
     @Getter
     @NoArgsConstructor
     @Entity
+    @Table(name = "\"user\"")
     public class User extends BaseTimeEntity {
 
         @Id
@@ -26,7 +27,7 @@ import javax.persistence.*;
         @Column
         private String picture;
 
-        @Enumerated(EnumType.STRING)
+        @Enumerated(EnumType.STRING)//JPA로 데이터베이스
         @Column(nullable = false)
         private Role role;
 
